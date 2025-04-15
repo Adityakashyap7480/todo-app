@@ -9,9 +9,9 @@ const TaskForm = ({ task, onSave }) => {
     if (!title) return;
     const newTask = { title };
     if (task) {
-      await axios.put(`http://localhost:8000/tasks/${task._id}`, newTask);
+      await axios.put(`https://todo-app-sjrg.onrender.com/tasks/${task._id}`, newTask);
     } else {
-      await axios.post("http://localhost:8000/tasks", newTask);
+      await axios.post("https://todo-app-sjrg.onrender.com/tasks", newTask);
     }
     setTitle("");
     onSave();
