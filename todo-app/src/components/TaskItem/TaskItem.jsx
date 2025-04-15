@@ -2,12 +2,12 @@ import axios from 'axios';
 
 const TaskItem = ({ task, onDelete, onToggleComplete, onEdit }) => {
   const handleDelete = () => {
-    axios.delete(`http://localhost:8000/tasks/${task._id}`);
+    axios.delete(`https://todo-app-sjrg.onrender.com/tasks/${task._id}`);
     onDelete(task._id);
   };
 
   const handleToggleComplete = () => {
-    axios.put(`http://localhost:8000/tasks/${task._id}`, { ...task, completed: !task.completed });
+    axios.put(`https://todo-app-sjrg.onrender.com/tasks/${task._id}`, { ...task, completed: !task.completed });
     onToggleComplete(task._id);
   };
 
