@@ -8,7 +8,7 @@ const App = () => {
   const [editingTask, setEditingTask] = useState(null);
 
   const fetchTasks = async () => {
-    const res = await axios.get("http://localhost:8000/tasks");
+    const res = await axios.get("https://todo-app-sjrg.onrender.com/tasks");
     setTasks(res.data.tasks);
   };
 
